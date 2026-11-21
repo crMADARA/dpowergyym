@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D Power Gym & Yoga | Tilda, Chhattisgarh</title>
+<meta name="description" content="D Power Gym & Yoga, Tilda. Weight training, cardio, yoga aur personal training. Free demo trial book karein.">
+
+<!-- ========== GOOGLE FONTS: Bebas Neue (headings) + Poppins (text) ========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ========== FONT AWESOME (icons) ========== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- ========== TAILWIND CSS ========== -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // RANG (COLORS) YAHAN BADLO: brand = main orange, gold = accent, dark/card = background
+  tailwind.config = { theme: { extend: {
+    colors: { brand:'#ff5a1f', gold:'#ffb020', dark:'#0f1115', card:'#181b22' },
+    fontFamily: { head:['"Bebas Neue"','sans-serif'], body:['Poppins','sans-serif'] }
+  }}}
+</script>
+<style>
+  /* Custom animations */
+  .reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}
+  .reveal.show{opacity:1;transform:none}
+  .hero-bg{background:radial-gradient(circle at 70% 20%,rgba(255,90,31,.35),transparent 55%),linear-gradient(135deg,#0f1115,#1c120e)}
+  .pulse-wa{animation:pw 2s infinite}
+  @keyframes pw{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+  input,select,textarea{background:#0f1115;border:1px solid #2a2e38;color:#fff;border-radius:.75rem;padding:.75rem 1rem;width:100%;outline:none}
+  input:focus,select:focus,textarea:focus{border-color:#ff5a1f}
+</style>
+</head>
+
+<body class="bg-dark text-white font-body">
+
+<!-- ========== NAVBAR ========== -->
+<header class="fixed top-0 inset-x-0 z-40 bg-dark/90 backdrop-blur border-b border-white/10">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#home" class="font-head text-2xl tracking-wider"><i class="fa-solid fa-dumbbell text-brand"></i> D POWER <span class="text-brand">GYM</span></a>
+    <ul class="hidden md:flex gap-6 text-sm">
+      <li><a class="hover:text-brand" href="#about">About</a></li>
+      <li><a class="hover:text-brand" href="#services">Services</a></li>
+      <li><a class="hover:text-brand" href="#plans">Plans</a></li>
+      <li><a class="hover:text-brand" href="#booking">Booking</a></li>
+      <li><a class="hover:text-brand" href="#contact">Contact</a></li>
+    </ul>
+    <a href="#booking" data-service="Free Demo Trial" class="hidden md:inline-block bg-brand px-5 py-2 rounded-full text-sm font-semibold">Free Demo</a>
+    <button id="menuBtn" class="md:hidden text-2xl" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+  <!-- Mobile menu -->
+  <ul id="mobMenu" class="hidden md:hidden bg-card px-4 pb-4 space-y-3 text-center">
+    <li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#plans">Plans</a></li>
+    <li><a href="#booking">Booking</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+<!-- ========== HERO ========== -->
+<section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+  <div class="max-w-6xl mx-auto px-4 text-center md:text-left">
+    <span class="inline-block border border-white/20 rounded-full px-4 py-1 text-sm mb-4"><i class="fa-solid fa-star text-gold"></i> 4.8 Google Rating · Tilda</span>
+    <h1 class="font-head text-6xl sm:text-8xl leading-none">STRONG BODY.<br><span class="text-brand">STRONG LIFE.</span></h1>
+    <p class="text-gray-300 mt-5 max-w-xl mx-auto md:mx-0">Expert trainers, saaf-suthra gym aur motivating mahaul. Aaj hi apna fitness safar shuru karo.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center md:justify-start">
+      <a href="#booking" data-service="Free Demo Trial" class="bg-brand px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"><i class="fa-solid fa-gift"></i> Free Demo Trial</a>
+      <a data-wa="Hi, mujhe D Power Gym ke baare mein jaankari chahiye" target="_blank" class="bg-[#25D366] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="py-16 px-4">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center reveal">
+    <div>
+      <h2 class="font-head text-5xl">ABOUT <span class="text-brand">US</span></h2>
+      <!-- NEECHE KA TEXT GYM OWNER SE PUCH KE BADLO -->
+      <p class="text-gray-300 mt-4">D Power Gym & Yoga Tilda ka ek well-maintained gym hai jahan weight training, cardio aur yoga ek hi jagah milta hai. Hamara maqsad hai har member ko sahi guidance ke saath fit banana.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-3 text-center">
+      <div class="bg-card rounded-2xl p-5"><div class="font-head text-4xl text-gold">4.8</div><small class="text-gray-400">Rating</small></div>
+      <div class="bg-card rounded-2xl p-5"><div class="font-head text-4xl text-gold">137+</div><small class="text-gray-400">Reviews</small></div>
+      <div class="bg-card rounded-2xl p-5"><div class="font-head text-4xl text-gold">6</div><small class="text-gray-400">Din Khula</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES (list neeche script mein SERVICES array se banti hai) ========== -->
+<section id="services" class="py-16 px-4 bg-card/40">
+  <div class="max-w-6xl mx-auto reveal">
+    <h2 class="font-head text-5xl text-center">HAMARI <span class="text-brand">SERVICES</span></h2>
+    <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10"></div>
+  </div>
+</section>
+
+<!-- ========== PLANS (PLANS array se banti hai; daam gym se confirm karo) ========== -->
+<section id="plans" class="py-16 px-4">
+  <div class="max-w-6xl mx-auto reveal">
+    <h2 class="font-head text-5xl text-center">MEMBERSHIP <span class="text-brand">PLANS</span></h2>
+    <div id="plansGrid" class="grid md:grid-cols-3 gap-5 mt-10"></div>
+  </div>
+</section>
+
+<!-- ========== FREE DEMO TRIAL BANNER ========== -->
+<section class="px-4">
+  <div class="max-w-6xl mx-auto bg-gradient-to-r from-brand to-gold rounded-3xl p-8 md:p-12 text-center reveal">
+    <h2 class="font-head text-5xl text-dark">GET YOUR FREE TRIAL NOW!</h2>
+    <p class="text-dark/80 mt-2">Before joining the gym,look and meet the trainer and then decide</p>
+    <a href="#booking" data-service="Free Demo Trial" class="inline-block mt-6 bg-dark text-white px-8 py-3 rounded-xl font-semibold">Free Demo Book Karo</a>
+  </div>
+</section>
+
+<!-- ========== BOOKING SYSTEM ========== -->
+<section id="booking" class="py-16 px-4">
+  <div class="max-w-2xl mx-auto bg-card rounded-3xl p-6 md:p-10 reveal">
+    <h2 class="font-head text-5xl text-center">SLOT <span class="text-brand">BOOK</span> KARO</h2>
+    <form id="bookForm" class="mt-8 grid gap-4">
+      <input type="checkbox" name="botcheck" class="hidden"> <!-- spam se bachav (Web3Forms) -->
+      <div class="grid sm:grid-cols-2 gap-4">
+        <input name="Naam" placeholder="Your Name *" required>
+        <input name="Phone" type="tel" pattern="[0-9+ ]{10,14}" placeholder="Phone number *" required>
+      </div>
+      <input name="email" type="email" placeholder="Email (optional)">
+      <select name="Service" id="svcSelect" required></select>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <input name="Date" id="dateInput" type="date" required>
+        <select name="Time" id="timeSelect" required></select>
+      </div>
+      <textarea name="Message" rows="2" placeholder="Anything else you want to say? (optional)"></textarea>
+      <button class="bg-brand py-3 rounded-xl font-semibold hover:opacity-90">Send Booking <i class="fa-solid fa-paper-plane"></i></button>
+      <a id="bookWa" target="_blank" class="text-center border border-[#25D366] text-[#25D366] py-3 rounded-xl font-semibold cursor-pointer"><i class="fa-brands fa-whatsapp"></i> WhatsApp pe bhi bhejo</a>
+      <p id="bookStatus" class="text-center text-sm"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ========== CONTACT + TIMINGS ========== -->
+<section id="contact" class="py-16 px-4 bg-card/40">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 reveal">
+    <div>
+      <h2 class="font-head text-5xl">MESSAGE <span class="text-brand">SEND</span></h2>
+      <form id="contactForm" class="mt-6 grid gap-4">
+        <input type="checkbox" name="botcheck" class="hidden">
+        <input name="Naam" placeholder="YOUR NAME *" required>
+        <input name="email" type="email" placeholder="Email *" required>
+        <textarea name="Message" rows="4" placeholder="YOUR MESSAGE *" required></textarea>
+        <button class="bg-brand py-3 rounded-xl font-semibold">Send Message</button>
+        <p id="contactStatus" class="text-center text-sm"></p>
+      </form>
+    </div>
+    <div class="space-y-4">
+      <div class="bg-card rounded-2xl p-5"><i class="fa-solid fa-location-dot text-brand"></i> Sai Dham Road, Tulsi, Tilda, Chhattisgarh 493114</div>
+      <div class="bg-card rounded-2xl p-5"><i class="fa-solid fa-phone text-brand"></i> <a data-tel class="js-phone"></a></div>
+      <div class="bg-card rounded-2xl p-5"><i class="fa-solid fa-clock text-brand"></i> monday - saturday: 6:00 AM - 9:30 PM <span class="text-gray-400">(Ravivar band)</span></div>
+      <iframe class="w-full h-56 rounded-2xl" loading="lazy" title="Map" src="https://maps.google.com/maps?q=21.53931,81.8029&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="py-8 text-center text-gray-400 text-sm">
+  <div class="font-head text-2xl text-white mb-2">D POWER <span class="text-brand">GYM & YOGA</span></div>
+  <div class="flex justify-center gap-5 text-xl mb-3">
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a> <!-- apna Instagram link daalo -->
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a data-wa="Hi" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+  © 2026 D Power Gym & Yoga, Tilda. All rights reserved.
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a data-wa="Hi, mujhe D Power Gym join karna hai" target="_blank" class="pulse-wa fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-3xl" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+/* ================= CONFIG: SIRF YAHAN BADLAV KARO ================= */
+const CONFIG = {
+  web3formsKey: 'YOUR_ACCESS_KEY_HERE',   // <-- web3forms.com pe apni email daal ke free key lo, yahan paste karo
+  whatsapp: '919644666882',               // country code ke saath, bina + ke
+  phone: '+91 96446 66882',
+  openHour: 6, closeHour: 21,             // slots 6 AM se 9 PM tak (closing 9:30 PM)
+  closedDay: 0                            // 0 = Ravivar band
+};
+// Services badalni ho to yahan edit karo (icon = Font Awesome naam)
+const SERVICES = [
+  {icon:'fa-dumbbell', title:'Weight Training', desc:'Muscle aur strength banane ke liye complete equipment.'},
+  {icon:'fa-person-running', title:'Cardio', desc:'Stamina badhao aur weight kam karo.'},
+  {icon:'fa-user-check', title:'Personal Training', desc:'Trainer ke saath apne goal ke hisaab se plan.'},
+  {icon:'fa-spa', title:'Yoga', desc:'Flexibility, balance aur mental peace ke liye.'}
+];
+// Plans ke daam SAMPLE hain. Gym owner se asli daam puch ke badlo.
+const PLANS = [
+  {name:'1 Mahina', price:'₹700', note:'Shuruat ke liye', hot:false},
+  {name:'3 Mahine', price:'₹1,800', note:'Sabse popular', hot:true},
+  {name:'1 Saal', price:'₹6,000', note:'Best value', hot:false}
+];
+/* ================= CONFIG KHATAM ================= */
+
+const $ = s => document.querySelector(s);
+
+// Phone aur WhatsApp links CONFIG se lagao
+document.querySelectorAll('[data-wa]').forEach(a => a.href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(a.dataset.wa));
+document.querySelectorAll('[data-tel]').forEach(a => { a.href = 'tel:' + CONFIG.phone.replace(/ /g,''); a.textContent = CONFIG.phone; });
+
+// Services aur Plans cards banao
+$('#servicesGrid').innerHTML = SERVICES.map(s => `
+  <div class="bg-card rounded-2xl p-6 text-center hover:-translate-y-2 hover:shadow-xl hover:shadow-brand/20 transition">
+    <i class="fa-solid ${s.icon} text-4xl text-brand"></i>
+    <h3 class="font-semibold text-lg mt-4">${s.title}</h3><p class="text-gray-400 text-sm mt-2">${s.desc}</p>
+  </div>`).join('');
+$('#plansGrid').innerHTML = PLANS.map(p => `
+  <div class="bg-card rounded-2xl p-8 text-center border-2 ${p.hot?'border-brand md:scale-105':'border-transparent'}">
+    ${p.hot?'<div class="text-gold text-sm mb-1"><i class="fa-solid fa-fire"></i> Popular</div>':''}
+    <h3 class="text-gray-300">${p.name}</h3><div class="font-head text-6xl my-2">${p.price}</div><p class="text-gray-400 text-sm">${p.note}</p>
+    <a href="#booking" class="inline-block mt-5 bg-brand px-6 py-2 rounded-full text-sm font-semibold">Join Karo</a>
+  </div>`).join('');
+
+// Booking form ke dropdowns
+const svcNames = ['Free Demo Trial', ...SERVICES.map(s => s.title), 'Membership Enquiry'];
+$('#svcSelect').innerHTML = svcNames.map(n => `<option>${n}</option>`).join('');
+let slots = '';
+for (let h = CONFIG.openHour; h < CONFIG.closeHour; h++) {
+  const t = (h % 12 || 12) + ':00 ' + (h < 12 ? 'AM' : 'PM'); slots += `<option>${t}</option>`;
+}
+$('#timeSelect').innerHTML = '<option value="" disabled selected>Time slot chuno *</option>' + slots;
+$('#dateInput').min = new Date().toISOString().split('T')[0];
+$('#dateInput').addEventListener('change', e => {         // Ravivar block
+  if (new Date(e.target.value + 'T00:00').getDay() === CONFIG.closedDay) { alert('Ravivar ko gym band rehta hai. Koi aur din chuno.'); e.target.value = ''; }
+});
+// "Free Demo" buttons booking form mein service select kar dete hain
+document.querySelectorAll('[data-service]').forEach(b => b.addEventListener('click', () => $('#svcSelect').value = b.dataset.service));
+
+// Form ko Web3Forms ke through email pe bhejo
+async function sendForm(form, statusEl, subject) {
+  const st = $(statusEl), fd = new FormData(form);
+  if (CONFIG.web3formsKey === 'YOUR_ACCESS_KEY_HERE') { st.textContent = 'Pehle CONFIG mein Web3Forms key daalo.'; st.className = 'text-center text-sm text-red-400'; return; }
+  fd.append('access_key', CONFIG.web3formsKey); fd.append('subject', subject); fd.append('from_name', 'D Power Gym Website');
+  st.textContent = 'Bhej raha hoon...'; st.className = 'text-center text-sm text-gray-300';
+  try {
+    const r = await (await fetch('https://api.web3forms.com/submit', {method:'POST', body:fd})).json();
+    if (r.success) { st.textContent = '✅ Bhej diya! Hum jaldi contact karenge.'; st.className = 'text-center text-sm text-green-400'; form.reset(); }
+    else throw new Error(r.message);
+  } catch (e) { st.textContent = '❌ Dikkat aayi, WhatsApp pe try karo.'; st.className = 'text-center text-sm text-red-400'; }
+}
+$('#bookForm').addEventListener('submit', e => { e.preventDefault(); sendForm(e.target, '#bookStatus', 'Nayi Booking - D Power Gym'); });
+$('#contactForm').addEventListener('submit', e => { e.preventDefault(); sendForm(e.target, '#contactStatus', 'Naya Message - D Power Gym'); });
+
+// Booking details WhatsApp pe bhejne ka button
+$('#bookWa').addEventListener('click', () => {
+  const f = new FormData($('#bookForm'));
+  const msg = `Booking: ${f.get('Service')}\nNaam: ${f.get('Naam')||'-'}\nDate: ${f.get('Date')||'-'}\nTime: ${f.get('Time')||'-'}`;
+  $('#bookWa').href = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
+});
+
+// Mobile menu
+$('#menuBtn').onclick = () => $('#mobMenu').classList.toggle('hidden');
+document.querySelectorAll('#mobMenu a').forEach(a => a.onclick = () => $('#mobMenu').classList.add('hidden'));
+
+// Scroll animation
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('show')), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(e => io.observe(e));
+</script>
+</body>
+</html>
